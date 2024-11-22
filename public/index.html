@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1 id="title">Survey Form</h1>
+    <p id="description">Answer some questions</p>
+    <form method="POST" action="/api/submit" id="survey-form">
+      <fieldset>
+        <label for="first-name" id="name-label"
+          >Enter Your Name:
+          <input
+            id="name"
+            name="name"
+            type="text"
+            placeholder="Enter Name"
+            required
+        /></label>
+        <label for="email" id="email-label"
+          >Enter Your Email:
+          <input
+            id="email"
+            name="email"
+            type="email"
+            placeholder="Enter your email"
+            required
+        /></label>
+        <label for="age" id="number-label"
+          >Input your age (years):
+          <input
+            id="number"
+            type="number"
+            name="age"
+            min="13"
+            max="120"
+            placeholder="Enter your age"
+            required
+        /></label>
+      </fieldset>
+
+      <fieldset>
+        <legend>
+          Would you recommend freeCodeCamp to a friend? (required)
+        </legend>
+        <label for="Definitely"
+          ><input
+            id="Definitely"
+            type="radio"
+            name="recommend"
+            class="inline"
+            value="Definitely"
+            checked
+          />
+          Definitely</label
+        >
+        <label for="Maybe"
+          ><input
+            id="Maybe"
+            type="radio"
+            name="recommend"
+            class="inline"
+            value="Maybe"
+          />
+          Maybe</label
+        >
+        <label for="Not sure"
+          ><input
+            id="Not sure"
+            type="radio"
+            name="recommend"
+            class="inline"
+            value="Not sure"
+          />
+          Not sure</label
+        >
+      </fieldset>
+      <legend>Device</legend>
+      <fieldset>
+        <label>
+          <input type="checkbox" value="laptop" name="device" /> laptop</label
+        ><br />
+        <label
+          ><input type="checkbox" value="phone" name="device" /> phone</label
+        >
+      </fieldset>
+
+      <fieldset>
+        <label for="referrer"
+          >How did you hear about us?
+          <select id="dropdown" name="referrer">
+            <option value="">(select one)</option>
+            <option value="freeCodeCamp News">freeCodeCamp News</option>
+            <option value="freeCodeCamp YouTube Channel">
+              freeCodeCamp YouTube Channel
+            </option>
+            <option value="freeCodeCamp Forum">freeCodeCamp Forum</option>
+            <option value="Other">Other</option>
+          </select>
+        </label>
+        <label for="bio"
+          >Provide a bio:
+          <textarea
+            id="bio"
+            name="bio"
+            rows="3"
+            cols="30"
+            placeholder="I like coding on the beach..."
+          ></textarea>
+        </label>
+      </fieldset>
+
+      <button type="submit" id="submit">Submit</button>
+    </form>
+    <script src="script.js"></script>
+  </body>
+</html>
