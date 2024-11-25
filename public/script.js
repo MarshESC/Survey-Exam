@@ -34,6 +34,9 @@ async function handleSubmit(event) {
 
     const data = await response.json(); // Parse the response as JSON
     alert(data.message); // Display the response message (e.g., success or error)
+
+    // Reset the form after successful submission
+    form.reset();
   } catch (error) {
     alert("Error submitting form."); // Show an error if something went wrong
   }
